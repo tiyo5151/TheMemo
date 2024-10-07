@@ -4,10 +4,7 @@ import '../styles/Scraps.css';
 const Scraps = () => {
   return (
     <div className="app-scraps">
-      <div className="app-scrap-header">
-        Sample
-        <div className="google-icon"></div>
-      </div>
+      <div className="app-scrap-header">Sample</div>
       <div className="app-scrap-content">
         This is a sample scrapaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
       </div>

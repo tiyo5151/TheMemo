@@ -1,4 +1,5 @@
 import './App.css';
+import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Scraps from './components/Scraps';
 import { useEffect, useState } from 'react';
@@ -19,8 +20,11 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <Sidebar scrap={scrap} />
-      <Scraps />
+      <Header />
+      <div className="app-body">
+        <Sidebar scrap={scrap} />
+        <Scraps />
+      </div>
     </div>
   );
 }
