@@ -5,7 +5,7 @@
   flex-direction: column;
   margin: 0;
   padding: 1rem 3rem;
-  overflow: auto;
+  overflow-y: scroll;
 }
 
 .app-scrap-header {
@@ -41,36 +41,64 @@
   padding: 0;
 }
 
+.app-scrap-input .user-input-icon {
+  align-items: center;
+  justify-content: left;
+}
+
 .input-header {
   width: 100%;
-  height: 1px;
+  height: 15%;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
-  border-bottom: 1px solid #c4c4c4;
   margin: 0;
   padding: 0;
 }
 
+.user-input-icon {
+  width: 3rem;
+  height: 3rem;
+  background-color: violet;
+  display: flex;
+  align-items: center;
+  border-radius: 100px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
 .app-scrap-input textarea {
   width: 100%;
-  height: 140px;
+  height: 65%;
   border: none;
   resize: none;
   border-bottom: 1px solid#c4c4c4;
   font-size: 1.5rem;
 }
 
-.input-footer {
-  width: 100%;
-  height: 10px;
+.app-scrap-input textarea:focus {
+  outline: none;
 }
 
+.input-footer {
+  display: flex;
+  width: 100%;
+  height: 10%;
+  justify-content: right;
+}
+
+.icons {
+  display: flex;
+  flex-grow: 1;
+}
 .input-footer button {
-  width: 10%;
+  display: flex;
+  width: 100px;
   height: 30px;
   border: 3px solid #c4c4c4;
   background-color: #33ccff;
   border-radius: 20px;
   cursor: pointer;
+  justify-content: center;
+  align-items: center;
 }

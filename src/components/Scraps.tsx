@@ -1,4 +1,6 @@
 import React from 'react';
+import { MdOutlineAddPhotoAlternate } from 'react-icons/md';
+import { GoPlus } from 'react-icons/go';
 import '../styles/Scraps.css';
 
 const Scraps = () => {
@@ -10,11 +12,14 @@ const Scraps = () => {
       </div>
       <div className="app-scrap-input">
         <div className="input-header">
-          sadsadsads
-          <div className="google-icon-input"></div>
+          <div className="user-input-icon"></div>
         </div>
-        <textarea placeholder="Enter your memo"></textarea>
+        <textarea placeholder="Memo"></textarea>
         <div className="input-footer">
+          <div className="icons">
+            <MdOutlineAddPhotoAlternate className="add-photo" />
+            <GoPlus className="add-plus" />
+          </div>
           <button>追加</button>
         </div>
       </div>
