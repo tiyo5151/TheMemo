@@ -21,10 +21,18 @@ const Sidebar: React.FC<SidebarProps> = ({
       },
     ]);
   };
+
+  const limit = document.querySelectorAll('.app-sidebar-item-content');
+  const limitLength = 20;
+  limit.forEach((element) => {
+    const str = element.textContent;
+    if (str && str.length > limitLength) {
+      element.textContent = str.substring(0, limitLength) + '…';
+    }
+  });
   return (
     <div className="app-sidebar">
       <div className="app-sidebar-header">
-        Memo
         <button onClick={onAddScrap}>New scrap</button>
       </div>
       <div className="app-sidebar-items">
