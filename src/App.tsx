@@ -13,7 +13,7 @@ function App() {
     const scrapElement: Scrap = {
       id: uuid(),
       title: 'My first scrap',
-      content: 'This is my first scrap',
+      content: 'This is my first scrap aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
       modDate: Date.now(),
     };
     setScrap([...(scrap || []), scrapElement]); //ここでエラー

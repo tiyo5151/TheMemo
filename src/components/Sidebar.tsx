@@ -31,11 +31,7 @@ const Sidebar: React.FC<SidebarProps> = ({
         {scrap?.map((item) => (
           <div key={item.id} className="app-sidebar-item">
             <div className="app-sidebar-items-row">
-              <input
-                className="app-sidebar-item-title"
-                value={item.title}
-                onChange={handleTitle}
-              />
+              <div className="app-sidebar-title">{item.title}</div>
               <FaTrash
                 className="app-sidebar-item-delete"
                 onClick={() => onDeleteScrap(item.id)}
