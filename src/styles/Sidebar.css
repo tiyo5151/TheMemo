@@ -41,6 +41,7 @@
 
 .app-sidebar-header button:hover {
   color: #3ea8ff;
+  font-size: 2rem;
 }
 
 .app-sidebar-items {

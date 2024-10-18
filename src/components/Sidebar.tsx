@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../styles/Sidebar.css';
 import { SidebarProps } from '../types/Sidebar';
 import { v4 as uuid } from 'uuid';
@@ -22,14 +22,22 @@ const Sidebar: React.FC<SidebarProps> = ({
     ]);
   };
 
-  const limit = document.querySelectorAll('.app-sidebar-item-content');
-  const limitLength = 20;
-  limit.forEach((element) => {
-    const str = element.textContent;
-    if (str && str.length > limitLength) {
-      element.textContent = str.substring(0, limitLength) + '…';
-    }
-  });
+  useEffect(() => {
+    const limit = document.querySelectorAll('.app-sidebar-item-content');
+    const limitLength = 20;
+
+    // console.log('Elements found:', limit.length);
+
+    limit.forEach((element, index) => {
+      const str = element.textContent;
+      // console.log(`Element ${index}:`, str);
+      if (str && str.length > limitLength) {
+        element.textContent = str.substring(0, limitLength) + '…';
+        // console.log(`Element ${index} truncated:`, element.textContent);
+      }
+    });
+  }, [scrap]);
+
   return (
     <div className="app-sidebar">
       <div className="app-sidebar-header">
