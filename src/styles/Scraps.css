@@ -6,6 +6,7 @@
   margin: 0;
   padding: 1rem 3rem;
   overflow-y: scroll;
+  z-index: inherit;
 }
 
 .app-scrap-header {

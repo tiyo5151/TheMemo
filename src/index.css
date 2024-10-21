@@ -1,9 +1,11 @@
 html {
   overflow-y: hidden;
+  z-index: 1;
 }
 
 body {
   margin: 0;
   padding: 0;
   background-color: aliceblue;
+  z-index: inherit;
 }

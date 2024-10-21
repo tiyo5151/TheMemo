@@ -12,6 +12,7 @@
   scrollbar-width: thin;
   scroll-behavior: smooth;
   scrollbar-color: #c4c4c4 rgb(189, 216, 240);
+  z-index: inherit;
 }
 
 .app-sidebar-header {

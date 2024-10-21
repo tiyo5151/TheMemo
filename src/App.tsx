@@ -5,9 +5,11 @@ import Scraps from './components/Scraps';
 import { useEffect, useState } from 'react';
 import { Scrap } from './types/app';
 import { v4 as uuid } from 'uuid';
+import PopUpTitle from './components/PopUpCreateTitle';
 
 function App() {
   const [scrap, setScrap] = useState<Scrap[] | null>(null);
+  const [createTitle, setCreateTitle] = useState<boolean>(false);
 
   const onAddScrap = () => {
     const scrapElement: Scrap = {
@@ -18,6 +20,7 @@ function App() {
     };
     setScrap([...(scrap || []), scrapElement]); //ここでエラー
     console.log(scrap);
+    setCreateTitle(true);
   };
 
   const onDeleteScrap = (id: string) => {
@@ -36,6 +39,7 @@ function App() {
           onDeleteScrap={onDeleteScrap}
         />
         <Scraps />
+        {createTitle && <PopUpTitle />}
       </div>
     </div>
   );

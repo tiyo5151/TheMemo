@@ -1,0 +1,11 @@
+.app-popup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  background-color: white;
+  border: 1px solid silver;
+  input {
+    border: none;
+  }
+}
