@@ -1,4 +1,3 @@
-import './App.css';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Scraps from './components/Scraps';
@@ -29,9 +28,9 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="w-full h-auto flex flex-col text-base m-0 p-0">
       <Header />
-      <div className="app-body">
+      <div className="flex flex-row">
         <Sidebar
           scrap={scrap}
           setScrap={setScrap}
