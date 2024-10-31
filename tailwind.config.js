@@ -5,6 +5,7 @@ export default {
     extend: {},
     fontFamily: {
       FugasOne: ['Fugaz One', 'sans-serif'],
+      arial: ['Arial', 'sans-serif'],
     },
   },
   plugins: [],

@@ -4,7 +4,6 @@ import Scraps from './components/Scraps';
 import { useEffect, useState } from 'react';
 import { Scrap } from './types/app';
 import { v4 as uuid } from 'uuid';
-import PopUpTitle from './components/PopUpCreateTitle';
 
 function App() {
   const [scrap, setScrap] = useState<Scrap[] | null>(null);
@@ -38,7 +37,6 @@ function App() {
           onDeleteScrap={onDeleteScrap}
         />
         <Scraps />
-        {createTitle && <PopUpTitle />}
       </div>
     </div>
   );
