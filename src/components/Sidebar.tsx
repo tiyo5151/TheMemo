@@ -44,13 +44,13 @@ const Sidebar: React.FC<SidebarProps> = ({
 
   return (
     <div className="w-1/4 h-screen flex flex-col justify-center items-center border-r-2 border-gray-400 m-0 bg-indigo-300 overflow-y-scroll scroll-smooth">
-      <div className="w-full h-6 flex justify-center items-center text-5xl font-bold m-0 p-0 border-b-2 border-gray-400">
+      <div className="w-full h-12 sticky flex justify-center items-center text-5xl font-bold m-0 p-0 border-b-2 border-gray-400">
         <button
           onClick={() => {
             onAddScrap();
             handleShowDialog();
           }}
-          className="flex items-center justify-center border-none bg-transparent ml-6 cursor-pointer font-bold text-base font-arial text-[#0a1afa] transition-all duration-300 hover:text-blue-950 hover:size-2"
+          className="flex border-none bg-transparent cursor-pointer font-bold text-base font-arial text-fuchsia-100 transition-all duration-300 hover:text-fuchsia-500"
         >
           New scrap
         </button>
@@ -67,9 +67,12 @@ const Sidebar: React.FC<SidebarProps> = ({
         <button onClick={handleCloseDialog}>Cancel</button>
         <button onClick={() => handleCloseDialog()}>Save</button>
       </dialog>
-      <div className="app-sidebar-items">
+      <div className="w-full h-full flex flex-col items-center m-0">
         {scrap?.map((item) => (
-          <div key={item.id} className="app-sidebar-item">
+          <div
+            key={item.id}
+            className="w-full h-28 flex justify-center flex-col text-2xl m-0  cursor-pointer border-b-2 border-gray-400 transition-all duration-300 hover:bg-indigo-400"
+          >
             <div className="app-sidebar-items-row">
               <div className="app-sidebar-title">{item.title}</div>
               <FaTrash
