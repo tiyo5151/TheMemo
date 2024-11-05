@@ -55,17 +55,23 @@ const Sidebar: React.FC<SidebarProps> = ({
           New scrap
         </button>
       </div>
-      <dialog ref={dialogRef} className="flex items-center justify-center">
-        <h1>title</h1>
+      <dialog
+        ref={dialogRef}
+        className="flex flex-col items-center justify-center  w-80 p-0 rounded-lg border border-gray-400 container  my-auto"
+      >
+        <h1 className="text-lg items-center justify-center mb-2">title</h1>
         <input
           type="text"
           onChange={() => {
             handleTitle(e.target.value);
             handleCloseDialog();
           }}
+          className="border-b border-gray-400 mb-2 active:border-0"
         />
-        <button onClick={handleCloseDialog}>Cancel</button>
-        <button onClick={() => handleCloseDialog()}>Save</button>
+        <div className="flex items-center justify-between">
+          <button onClick={handleCloseDialog}>Cancel</button>
+          <button onClick={() => handleCloseDialog()}>Save</button>
+        </div>
       </dialog>
       <div className="w-full h-full flex flex-col items-center m-0">
         {scrap?.map((item) => (
