@@ -43,7 +43,10 @@ const Sidebar: React.FC<SidebarProps> = ({
   }, [scrap]);
 
   return (
-    <div className="w-1/4 h-screen flex flex-col justify-center items-center border-r-2 border-gray-400 m-0 bg-indigo-300 overflow-y-scroll scroll-smooth">
+    <div
+      className="w-1/4 h-screen flex flex-col justify-center items-center
+     m-0 bg-indigo-300 overflow-y-scroll scroll-smooth"
+    >
       <div className="w-full h-12 sticky flex justify-center items-center text-5xl font-bold m-0 p-0 border-b-2 border-gray-400">
         <button
           onClick={() => {
@@ -57,7 +60,7 @@ const Sidebar: React.FC<SidebarProps> = ({
       </div>
       <dialog
         ref={dialogRef}
-        className="flex flex-col items-center justify-center  w-80 p-0 rounded-lg border border-gray-400 container  my-auto"
+        className="flex flex-col items-center justify-center  w-80 p-0 rounded-lg border border-gray-400 container my-auto backdrop-blur-xl "
       >
         <h1 className="text-lg items-center justify-center mb-2">title</h1>
         <input
